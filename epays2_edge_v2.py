@@ -14,6 +14,8 @@ numero_de_paginas = int(input('Informe o numero de páginas que devem ser valida
 print('tentando')
 
 
+#funções:
+
 def processo():
 
     #logar na pagina
@@ -47,11 +49,6 @@ def processo():
     #espelho de ponto
     driver.find_element('xpath', '/html/body/app-root/app-gestor/internal-view/div/main/div/div/integration-pontofopag-menu/div/div/div/div[1]').click()
 
-
-driver = webdriver.Edge(executable_path='msedgedriver.exe')
-driver.get('https://app.epays.com.br/login')
-driver.implicitly_wait(30)
-processo()
 
 #looping aqui
 def ler_elementos_pagina():
@@ -112,6 +109,12 @@ def proxima_pagina():
 
 
 
+## codigo ##
+
+driver = webdriver.Edge(executable_path='msedgedriver.exe')
+driver.get('https://app.epays.com.br/login')
+driver.implicitly_wait(30)
+processo()
 
 for i in range(numero_de_paginas): 
     i+1
