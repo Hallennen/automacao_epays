@@ -7,15 +7,11 @@ import time , glob, os, shutil, getpass
 print('\n\n \t\t Para realizar a extração informe os dados abaixo. \n\n\n ')
 
 user= input('Informe o login de acesso ao Epays: ')
-password = getpass.getpass('Informe a senha de acesso ao Epays: ',stream='*')
+password = getpass.getpass('Informe a senha de acesso ao Epays: ')
 mes_ano_de_validacao = input('informe o mês da extração: (EX: JAN)  ').upper()
 ano_validacao= input('Informe o ano da extração:  (EX: 2024)  ')
 numero_de_paginas = int(input('Informe o numero de páginas que devem ser validadas:  (EX: 5)  '))
 print('tentando')
-
-# '36525576890'
-# '40471178'
-
 
 
 def processo():
